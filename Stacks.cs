@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StacksAndQueues
 {
-    class Stacks
+    public class Stacks
     {
         //Defining a node which is assigned null value in constructor
         //it is like a head and used to point to first node.
@@ -38,12 +38,53 @@ namespace StacksAndQueues
         /// </summary>
         public void Display()
         {
+            Node temp = top;
             Console.WriteLine("\nDisplaying the Stack");
+            if (temp == null)
+            {
+                Console.WriteLine("Empty Stack");
+            }
             //Loop runs until null value is obtained in data.
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data);
+                temp = temp.next;
+            }
+        }
+        /// <summary>
+        /// Displaying top value in stack
+        /// </summary>
+        public int Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Empty Stack");
+            }
+            Console.WriteLine("Displaying top value in stack");
+            Console.WriteLine(top.data);
+            return top.data;
+        }
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Empty Stack");
+            }
+            Console.WriteLine("Removing the top value from stack");
+            //moving the pointer of top to next node
+            top = top.next;
+            Display();
+        }
+        /// <summary>
+        /// Removes all element from stack by calling peek and pop
+        /// </summary>
+        public void IsEmpty()
+        {
+            Console.WriteLine("Removing all the values from stack");
             while (top != null)
             {
-                Console.WriteLine(top.data);
-                top = top.next;
+                Peek();
+                Pop();
             }
         }
     }
