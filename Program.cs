@@ -8,7 +8,7 @@ namespace StacksAndQueues
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome To Stack and Queues");
-            Console.WriteLine("Stack Program");
+            /*Console.WriteLine("Stack Program");
             //Creating object for stacks
             Stacks stacks = new Stacks();
             //pushing values in stacks
@@ -22,7 +22,17 @@ namespace StacksAndQueues
             //poping out the top value
             stacks.Pop();
             //Removing all elements from stack
-            stacks.IsEmpty();
+            stacks.IsEmpty();*/
+
+            Console.WriteLine("Queue program");
+            //creating object for queue
+            Queue queue = new Queue();
+            //putting values in queue
+            queue.Enqueue(44);
+            queue.Enqueue(33);
+            queue.Enqueue(23);
+            queue.DisplayQueue();
+
         }
     }
 }
