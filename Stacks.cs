@@ -66,13 +66,14 @@ namespace StacksAndQueues
         }
         public void Pop()
         {
-            if (top == null)
+            Node temp = top;
+            if (temp == null)
             {
                 Console.WriteLine("Empty Stack");
             }
             Console.WriteLine("Removing the top value from stack");
             //moving the pointer of top to next node
-            top = top.next;
+            top = temp.next;
             Display();
         }
         /// <summary>
