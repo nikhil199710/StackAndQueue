@@ -32,6 +32,12 @@ namespace StacksAndQueues
             queue.Enqueue(33);
             queue.Enqueue(23);
             queue.DisplayQueue();
+            //peeking out the first entered value
+            queue.QueuePeek();
+            //poping out the first entered value
+            queue.Dequeue();
+            //Removing all elements from queue
+            queue.IsEmptyQueue();
 
         }
     }
