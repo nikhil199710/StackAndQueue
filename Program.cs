@@ -28,9 +28,9 @@ namespace StacksAndQueues
             //creating object for queue
             Queue queue = new Queue();
             //putting values in queue
-            queue.Enqueue(44);
-            queue.Enqueue(33);
-            queue.Enqueue(23);
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
             queue.DisplayQueue();
 
         }
